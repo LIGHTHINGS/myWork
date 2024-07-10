@@ -21,9 +21,14 @@ then: sudo install boto3 and botocore specifically for AWS
 
 then: create an AWS IAM acces_key and secret_key
 
-=> all is done on AWS web or console
+=> all is done on AWS web or console, then save
+the access key as variable AWS_ACCESS_KEY_ID &
+AWS_SECRET_ACCESS_KEY
 
+then: create an AWS yaml file for aws plugin
+=> plugin: amazon.aws.aws_ec2
+then run the command : ansible-inventory -i <AWS PLUGIN FILE NAME> --graph /list
 
-
-=> 
+to use the incentory dynamically :
+=> ansible all  -i <plugin yaml file> -m
 	

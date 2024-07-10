@@ -1,0 +1,29 @@
+Ansible 2024 Notes
+
+There are two types of inventory:
+1. Static  2. Dynamic
+
+Dynamic inventory is preferred due to restart of host server
+which can happen as cloud systems have dowmtimes.
+0
+For AWS:
+To check the list of ansible inventory plugin with command:
+ ansible-doc -t inventory -l
+
+then: add plugins to ansible.cfg as default plugins
+
+=> [inventory]
+   enable_plugins = host_list, script, ini, auto, yaml, toml
+
+then: sudo install boto3 and botocore specifically for AWS
+
+=> pip3 install boto3 which usually has botocore
+
+then: create an AWS IAM acces_key and secret_key
+
+=> all is done on AWS web or console
+
+
+
+=> 
+	

@@ -30,5 +30,15 @@ then: create an AWS yaml file for aws plugin
 then run the command : ansible-inventory -i <AWS PLUGIN FILE NAME> --graph /list
 
 to use the incentory dynamically :
-=> ansible all  -i <plugin yaml file> -m
+=> ansible all  -i <plugin yaml file> -m ping
 	
+NOTE: WHEN CONNECTING, AWS WILL BOUNCE YOU BECAUSE
+IT REFUSES YOU FROM BEING ROOT HENCE YOU'D MODIFY YOUR COMMAND :
+
+=> ansible all -i <plugin yaml file> -u ec2-user -m ping
+
+Also, there is need to add a command to the plugin yaml file
+=> filters: 
+	instance-state-name: running
+^
+|| this handles error if something wrong happened to the host

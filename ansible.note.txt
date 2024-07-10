@@ -42,3 +42,14 @@ Also, there is need to add a command to the plugin yaml file
 	instance-state-name: running
 ^
 || this handles error if something wrong happened to the host
+
+
+
+
+FOR GCP: 
+	The YML file will look like
+plugin : gcp_compute
+Projects: 
+	<gcp_project_id>
+auth_kind: serviceaccount
+service_account_file: <path>

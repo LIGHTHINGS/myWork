@@ -53,3 +53,4 @@ Projects:
 	<gcp_project_id>
 auth_kind: serviceaccount
 service_account_file: <path>
+#we can add filter to get certain host too, check image: GCP.YML.png

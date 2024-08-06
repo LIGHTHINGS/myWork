@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/env bash
 
 git add .
 echo "files getting tracked"
